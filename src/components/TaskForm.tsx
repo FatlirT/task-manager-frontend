@@ -87,7 +87,7 @@ const TaskForm = ({ create, initialData }: TaskFormProps) => {
                         type="text"
                         value={formData.title}
                         onChange={(e) => handleChange("title", e.target.value)}
-                        disabled={!isEditing}
+                        disabled={!create && !isEditing}
                         className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:bg-gray-100"
                     />
                 </div>
@@ -101,7 +101,7 @@ const TaskForm = ({ create, initialData }: TaskFormProps) => {
                         rows={4}
                         value={formData.description}
                         onChange={(e) => handleChange("description", e.target.value)}
-                        disabled={!isEditing}
+                        disabled={!create && !isEditing}
                         className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:bg-gray-100"
                     />
                 </div>
@@ -119,7 +119,7 @@ const TaskForm = ({ create, initialData }: TaskFormProps) => {
                                         value={status}
                                         checked={formData.status === status}
                                         onChange={(e) => handleChange("status", e.target.value)}
-                                        disabled={!isEditing}
+                                        disabled={!create && !isEditing}
                                         className="disabled:bg-gray-100"
                                     />
                                     {toTitleCase(status)}
@@ -140,7 +140,7 @@ const TaskForm = ({ create, initialData }: TaskFormProps) => {
                             min={getTomorrowDate()}
                             value={formData.due_date}
                             onChange={(e) => handleChange("due_date", e.target.value)}
-                            disabled={!isEditing}
+                            disabled={!create && !isEditing}
                             className="w-1/2 border border-gray-300 rounded-md px-3 py-2 disabled:bg-gray-100"
                         />
                         <input
@@ -149,7 +149,7 @@ const TaskForm = ({ create, initialData }: TaskFormProps) => {
                             type="time"
                             value={formData.due_time}
                             onChange={(e) => handleChange("due_time", e.target.value)}
-                            disabled={!isEditing}
+                            disabled={!create && !isEditing}
                             className="w-1/2 border border-gray-300 rounded-md px-3 py-2 disabled:bg-gray-100"
                         />
                     </div>
