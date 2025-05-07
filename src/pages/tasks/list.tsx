@@ -55,7 +55,7 @@ export default function TasksList() {
                     to="new"
                     className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
                 >
-                    Create New Task
+                    Add New Task
                 </Link>
             </div>
 

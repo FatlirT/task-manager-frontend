@@ -13,7 +13,7 @@ export default function TasksNew() {
                 </Link>
             </div>
 
-            <h1 className="text-2xl font-bold mb-6">Create New Task</h1>
+            <h1 className="text-2xl font-bold mb-6">New Task</h1>
 
             <TaskForm create={true} />
         </div>
